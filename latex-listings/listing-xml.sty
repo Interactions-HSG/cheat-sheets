@@ -1,0 +1,18 @@
+\RequirePackage{listings}
+
+\lstdefinelanguage{XML}
+{
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{LightGray},
+  columns=fullflexible,
+  breaklines=false,
+  sensitive=true,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}

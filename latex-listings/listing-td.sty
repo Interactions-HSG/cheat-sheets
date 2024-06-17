@@ -1,0 +1,38 @@
+%% Golang definition for listings
+%% http://github.io/julienc91/lstlistings-golang
+%%
+\RequirePackage{listings}
+
+\lstdefinelanguage{td}%
+  {morekeywords=[1]{@context, @type, @id},%
+   morekeywords=[2]{actions, events, properties},%
+   morekeywords=[3]{brick:},%
+   sensitive=true,%
+   morekeywords=[4]{manages,specification,manipulates,affects,sensor,actuator,sensor,observes,specifiedVariable,hasMinValue,systemModel,simulationModel,relatedTo,atComponent},%
+   morecomment=[s]{"https://}{"},%
+   }
+   
+\definecolor{key1}{rgb}{0.0, 0.0, 1.0}
+\definecolor{key2}{rgb}{1.0, 0.5, 0.0}
+\definecolor{key3}{rgb}{0.0, 0.8, 0.0}
+\definecolor{key4}{rgb}{0.1,0.6,0.1}
+\definecolor{com1}{rgb}{0.0, 0.28, 0.67}
+
+\lstset{ % add your own preferences
+    basicstyle=\linespread{1.0}\ttfamily\footnotesize,
+    backgroundcolor=\color{gray!5},
+	%captionpos=b,
+    frame=none,
+    framerule=0pt,
+    keywordstyle=\color{key1},
+    keywordstyle=[2]{\color{key2}\bfseries},
+    keywordstyle=[3]{\color{key3}},
+    keywordstyle=[4]{\color{key4}\bfseries},
+    commentstyle=\color{com1},
+    numbers=left,
+    numberstyle=\tiny, 
+    showstringspaces=false,
+    tabsize=1,
+    xleftmargin=0.5em,
+    language=td
+}

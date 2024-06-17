@@ -1,0 +1,91 @@
+\RequirePackage{listings}
+
+\lstdefinelanguage{ASL}{
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{LightGray},
+  columns=fullflexible,
+  breaklines=false,
+  sensitive=true,
+  % --------------------------
+  frame=bt,
+  aboveskip=1em,
+  belowskip=1em,
+  xleftmargin=.5em,
+  xrightmargin=.5em,
+  framexleftmargin=.5em,
+  framextopmargin=.5em,
+  framexbottommargin=.5em,
+  framexrightmargin=.5em,
+  % --------------------------
+  tabsize = 2,
+  showstringspaces=false,
+  morecomment=[l][\color{gray}]{\#},       % comments
+  morecomment=[n][\color{blue}]{<http}{>}, % uris
+  morestring=[b][\color{OliveGreen}]{\"},  % strings
+  % -------------------------- variables
+  keywordsprefix=?,
+  classoffset=0,
+  keywordstyle=\color{Sepia},
+  morekeywords={},
+  % -------------------------- prefixes
+  classoffset=1,
+  keywordstyle=\color{Purple},
+  morekeywords={rdf,rdfs,owl,xsd,purl,phy,req,sys,td},
+  classoffset=2,
+  keywordstyle=\color{Green},
+  morekeywords={eka},
+  % -------------------------- keywords
+  classoffset=3,
+  keywordstyle=\color{MidnightBlue},
+  morekeywords={
+    SELECT,CONSTRUCT,DESCRIBE,ASK,WHERE,FROM,NAMED,PREFIX,BASE,OPTIONAL,
+    FILTER,GRAPH,LIMIT,OFFSET,SERVICE,UNION,EXISTS,NOT,BINDINGS,MINUS,a
+  },
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+% Define the AgentSpeak language for JaCaMo
+% Define colors for syntax highlighting
+\definecolor{keywordcolor}{RGB}{0,0,255}
+\definecolor{stringcolor}{RGB}{163,21,21}
+\definecolor{commentcolor}{RGB}{0,128,0}
+
+\lstdefinelanguage{JaCaMoAgentSpeak}{
+  % Keywords
+  keywords={+!, !, +, ?},
+  keywordstyle=\color{keywordcolor}\bfseries,
+  % Strings
+  stringstyle=\color{stringcolor},
+  morestring=[b]",
+  % Comments
+  commentstyle=\color{commentcolor}\itshape,
+  morecomment=[l]{\%},
+  % Plans and beliefs
+  moredelim=[s][\color{keywordcolor}\bfseries]{[+}{]},
+  moredelim=[s][\color{keywordcolor}\bfseries]{[-}{]},
+  % Achieves and triggers
+  moredelim=[s][\color{keywordcolor}\bfseries]{<+}{>},
+  moredelim=[s][\color{keywordcolor}\bfseries]{<-}{>},
+  % Line numbers
+  numbers=left,
+  numberstyle=\small\ttfamily\color{gray},
+  numbersep=5pt,
+  % Basic formatting
+  basicstyle=\small\ttfamily,
+  % Frame
+  frame=single,
+  frameround=tttt,
+  rulecolor=\color{black},
+  % Spaces
+  showspaces=false,
+  showstringspaces=false,
+  % Tabs
+  showtabs=false,
+  % Captions
+  captionpos=b,
+}
